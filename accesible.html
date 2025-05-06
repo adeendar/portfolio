@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accesible | Arman Deendar</title>
+    <link rel="stylesheet" href="accesible.css" />
+  </head>
+
+  <body>
+    <header>
+            <div class="logo">
+                <p>Arman Deendar</p>
+            </div>
+        <a 
+        class="linkedin-link"
+        href="https://www.linkedin.com/in/arman-deendar-8029961a0/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        >
+        &#8599;
+      </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
+                <!-- <li><a href="fun.html">Writing & Fact-checking</a></li> -->
+                <li><a href="https://drive.google.com/file/d/125130HF9HuIdF1uutNFO4LqQH81hHfrw/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <div id="content">
+        <h1>Designing an Accessible Search Bar</h1>
+        <h2>Context</h2>
+        <p>
+            Search bars are a very common component found in many of the interfaces that we use on a daily basis. 
+            However, not all search bars are created equal.
+            <br>
+            In this casye study, I will show some of the accessibility drawbacks with search bars across 3 commonly-used 
+            platforms: GMail, Spotify, and VSCode.
+        </p>
+    
+        <h2>Input Research</h2>
+        <p>
+            To start, let's analyze each platform's search-box trigger states and interactions across keyboard and mouse clicks
+        </p>
+        <img src="assets/Accc.png">
+    
+        <div class="grid-container">
+            <div class="grid-item"></div>
+            <div class="grid-item">Gmail</div>
+            <div class="grid-item">Spotify</div>
+            <div class="grid-item">VSCode</div>
+            <div class="grid-item">Mouseclick</div>
+            <div class="grid-item">
+                <ul>
+                    <li>mouse click in triggers active state</li>
+                    <li>when active state triggered, click outside search triggers disabled state</li>
+                    <li>search icon click does not alter state</li>
+                </ul>
+               </div>
+            <div class="grid-item">
+                <ul>
+                    <li>mouse click in triggers active state</li>
+                    <li>when active state triggered, click outside search triggers disabled state</li>
+                    <li>search icon click triggers active state</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+              <ul>
+                <li>mouse click in triggers active state</li>
+                <li>when active state triggered, click outside search triggers disabled state</li>
+                <li>search icon click </li>
+            </ul>
+    
+            </div>
+            <div class="grid-item">Keyboard</div>
+            <div class="grid-item">
+              <ul>
+                <li>"/k" command enters search only when accesible settings turned on"</li>
+                <li>"enter" key triggers disabled state</li>
+            </ul>
+    
+            </div>
+            <div class="grid-item">
+              <ul>
+                <li>"command +k" enters search regardless of settings"</li>
+                <li>"enter" key triggers disabed state</li>
+            </ul>
+    
+            </div>
+            <div class="grid-item">
+              <ul>
+                <li>"/k" command enters search only when accesible settings turned on"</li>
+                <li>"enter" key triggers disabled state</li>
+            </ul>
+            </div>
+          </div>
+    
+        <h2>Outputs</h2>
+          <div class="grid-container">
+            <div class="grid-item"></div>
+            <div class="grid-item">Gmail</div>
+            <div class="grid-item">Spotify</div>
+            <div class="grid-item">VSCode</div>
+            <div class="grid-item">Mouseclick</div>
+            <div class="grid-item">
+                    <img src = "assets/Gmail1.png">
+                    <p>click triggers active state</p>
+                    <img src = "assets/GmailEx.png">
+                    <p>search icon click triggers disabled state</p>
+               </div>
+            <div class="grid-item">
+                <img src = "assets/Spotify1.png">
+                <p>click triggers active state</p>
+                <img src = "assets/SpotifyHover.png">
+                <p>hover trigger highlight</p>
+            </div>
+            <div class="grid-item">
+                <img src = "assets/Vscode1.png">
+                <p>triggers active state</p>
+            </div>
+            <div class="grid-item">Keyboard</div>
+            <div class="grid-item"> 
+                <img src="assets/GMail-rec.png">
+                <p>fills in recommendation when user begins to type</p>
+            </div>
+            <div class="grid-item">
+                <img src = "assets/SpotifyK.png">
+                <p>keyboard command triggers different active state than mouseclick</p>
+                <img src = "assets/SpotifyK2.png">
+            </div>
+          </div>
+    
+          <h3>Output Observations</h3>
+    
+          <div id="sketches-takeaway" class="sketch-group">
+            <div class="def-box">
+              <p>Similarities across aplications:</p>
+              <ul>
+                <li>Disabled state has a list of recommneded search options</li>
+              </ul>
+            </div>
+            <div class="def-box">
+                <p>Differences across aplications:</p>
+                <ul>
+                  <li>Only Spotify has a visual prompt for keyboard shortcut</li>
+                  <li>Unlike the others, Spotify's intitial search prompt does not include the word 'search'</li>
+                </ul>
+              </div>
+            </div>
+          
+        
+    
+        <h3>Input Observations</h3>
+    
+    
+        <div id="sketches-takeaway" class="sketch-group">
+            <div class="def-box">
+              <p>Similarities across aplications</p>
+              <ul>
+                <li>Component is triggered by a mouse click</li>
+                <li>Right-clicking does not alter the state</li>
+                <li>high learnability because component is accompanied by prompting text</li>
+              </ul>
+            </div>
+            <div class="def-box">
+                <p>Differences across aplications</p>
+                <ul>
+                  <li>For Gmail, if a user does not click on the center of the component, the recommneded actions drop-down does not appear</li>
+                  <li>Unlike the others, Spotify's intitial search prompt does not include the word 'search'</li>
+                </ul>
+              </div>
+        </div>
+    
+        <h3>Accessibility</h3>
+        <p>Using a screen reader to test outputs across all applications I found some interesting behaviors</p>
+        <div class="reader-container">
+            <div class="grid-item">Gmail</div>
+            <div class="grid-item">Spotify</div>
+            <div class="grid-item">VSCode</div>
+            <div class="grid-item">
+                <img src = "assets/GMAIL2.png">
+                Screen reader gives prompt and notifies the user of a menu pop up for recommended actions
+            </div>
+            <div class="grid-item">
+                <img src ="assets/Spotify-SR.png">
+                The screen reader reads the full holder text
+            </div>
+            <div class="grid-item">
+                <img src = "assets/VSCode2.png">
+                Screen reader does not prompt search message, instead goes straight to the first result
+            </div>
+        </div>
+        <p>As the screenreader test showed, outputs tend to vary significantly based on keyboard-only input. And often,
+            I found that search components are not as friendly to keyboard-only users as most output cues are signaled visually.
+        </p>
+    
+    
+    
+        <h2>Modeling the Interaction</h2>
+        <h2>State Model: Mouse User</h2>
+        <p>This state model visualizes how a mouse user would interact with a search component</p>
+        <img src="assets/statemodl.png">
+    
+        <h2>State Model: Keyboard User</h2>
+        <img src="assets/keyboard-statemodel.png">
+    
+        <h2>Intentional Tradeoffs State Model</h2>
+    
+        <h3>Mouse User Edited State Model</h3>
+        <img src ="assets/SMMC.png">
+        <p>I edited the state model so that if a mouse user clicks the search icon, it will activate the active state.</p>
+        <p>This is a tradeoff between accesibliltiy for keyboard users because it privillegeds visual cues that we take for granted as "intuitive."</p>
+        
+    
+        <h3>Keyboard User Edited State Model</h3>
+        <img src = "assets/SPACE.png">
+        <p>Drawing from the input and output analysis and accesibility considerations above, I considered having a spacebar trigger back from the disabled state to the active state.:</p>
+        <p>I chose this tradeoff in order to illustrate how keyboard users are more likely to be familiar wth that command, even though mouse users may mistake that for another command.</p>
+    
+        <h2>Redesign</h2>
+        <img src = "assets/Group8.png">
+        <p>Thinking with keyboard users in mind, I chose to redesign the GMail search component by adding a popup for the keyboard command that triggers the search component.</p>
+        <p>This redesign choice would work with a screen reader by reading the suggested command, and takes into account new users and increasingly memorability for screen-reader users</p>
+        <img src ="assets/Group12.png">
+    </div>
+    </body>
+

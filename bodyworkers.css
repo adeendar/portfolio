@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    font-family: 'Andale Mono', monospace;
+    flex-direction: column;
+    background-color: lightgrey;
+    padding: 0; 
+    margin: 0;
+  }
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    height: 6vw;
+    padding: 0 2rem;
+
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Adjust to control spacing */
+}
+
+.linkedin-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.linkedin-link:hover {
+  color: #555;
+}
+
+.logo{
+    font-family: 'Andale Mono', monospace;
+}
+
+nav {
+    margin-left: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #555;
+}
+
+#intro {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  #specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #content {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .linkedin-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .linkedin-link:hover {
+    color: #555;
+
+  }

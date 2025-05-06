@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    font-family: 'Andale Mono', monospace;
+    flex-direction: column;
+    background-color: lightgrey;
+    padding: 0; 
+    margin: 0;
+  }
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    height: 6vw;
+    padding: 0 2rem;
+
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem; 
+}
+
+.linkedin-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.linkedin-link:hover {
+  color: #555;
+}
+
+.logo{
+    font-family: 'Andale Mono', monospace;
+}
+
+nav {
+    margin-left: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #555;
+}
+
+#content {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+  }
+
+  #intro {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  img {
+    display: block;
+    margin: 3rem auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+    margin-top: 2rem;
+  }
+  
+  ul, p {
+    margin-bottom: 1rem;
+  }
+
+  
+  .storyboard-container {
+    display: grid;
+    gap: 20px;
+    margin-top: 2rem;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
